@@ -1,28 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-import Title from './components/Title';
+import Grid from './components/Grid';
+import TopBlock from './components/TopBlock';
+import BottomBlock from './components/BottomBlock';
+import VideoPlayer from './components/VideoPlayer';
 
-function App() {
+import doorOne from './assets/video/door_1.mp4';
+
+const App = () => {
+  const [currentVideo] = useState(doorOne);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Title>Testing</Title>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Grid>
+        <VideoPlayer src={currentVideo} />
+        <TopBlock>
+          <h1>Top</h1>
+        </TopBlock>
+        <BottomBlock>
+          <h1>Bottom</h1>
+        </BottomBlock>
+      </Grid>
+    </>
   );
-}
+};
 
 export default App;
