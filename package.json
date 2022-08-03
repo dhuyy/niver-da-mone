@@ -1,5 +1,7 @@
 {
   "name": "niver-da-mone",
+  "homepage": "https://niver-da-mone.site",
+  "description": "Projeto do website: niver-da-mone.site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "react-scripts build && make -s"
   },
   "eslintConfig": {
     "extends": [
