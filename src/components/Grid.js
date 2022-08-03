@@ -14,7 +14,7 @@ const GridContainer = styled.div`
 GridContainer.defaultProps = {
   display: 'grid',
   gridTemplateColumns: '100vw',
-  gridTemplateRows: '35vh 65vh',
+  gridTemplateRows: '50vh 50vh',
 };
 
 const Grid = ({ children }) => {

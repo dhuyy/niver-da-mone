@@ -6,11 +6,18 @@ import { Flex } from './Flex';
 const Container = styled(Flex)`
   ${gridArea};
   ${zIndex};
+
+  border: 2px solid white; /** REMOVE THIS */
 `;
 
 Container.defaultProps = {
+  p: '70px',
   gridArea: 'Top',
   zIndex: '1',
+  flexDirection: 'column',
+  alignItems: 'center',
+  textAlign: 'center',
+  justifyContent: 'space-between',
 };
 
 const TopBlock = ({ children }) => {
