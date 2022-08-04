@@ -23,13 +23,15 @@ Container.defaultProps = {
 const SubmitButton = styled(BaseButton)`
   ${height}
   ${fontSize}
+
+  font-family: 'Verdana';
 `;
 
 SubmitButton.defaultProps = {
   ml: '16px',
   px: '16px',
   py: '8px',
-  fontSize: '20px',
+  fontSize: '18px',
   height: 'calc(100% - 13px)',
 };
 

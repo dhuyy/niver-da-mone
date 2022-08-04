@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useVideo } from 'react-use';
 import styled from '@emotion/styled';
 import { position, zIndex, width, height } from 'styled-system';
@@ -19,8 +19,13 @@ Video.defaultProps = {
   zIndex: '0',
 };
 
-function VideoPlayer({ src }) {
-  const [video] = useVideo(<Video src={src} autoPlay muted loop />);
+function VideoPlayer({ src, handleVideoRef }) {
+  const [video, , , ref] = useVideo(<Video src={src} />);
+
+  useEffect(() => {
+    handleVideoRef(ref);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return video;
 }

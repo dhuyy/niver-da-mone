@@ -6,6 +6,8 @@ import { Flex } from './Flex';
 const TipText = styled(Flex)`
   ${color};
   ${fontSize};
+  
+  font-family: 'treasurehunt';
 `;
 
 TipText.defaultProps = {
