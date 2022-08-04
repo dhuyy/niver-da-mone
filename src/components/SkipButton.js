@@ -54,6 +54,8 @@ ImageInsideButton.defaultProps = {
 const Text = styled.p`
   ${space};
   ${fontSize};
+
+  font-family: 'Verdana';
 `;
 
 Text.defaultProps = {
@@ -66,19 +68,19 @@ const FUNNY_MEMES = [
   skipTwo,
   skipThree,
   skipFour,
-  skipFive,
-  skipSix,
   skipSeven,
+  skipSix,
+  skipFive,
 ];
 
 const FUNNY_PHRASES = [
-  'MUITO BEM.. VAI AVANÇAR PARA O PRÓXIMO?',
-  'VAI CONTINUAR?',
+  'BOA! TÁ PREPARADA? VAMOS COMEÇAR!',
+  'HUUUUM.. VAI CONTINUAR?',
   'TU QUER MESMO ESSE PRESENTE NÉ.. VAI CONTINUAR?',
-  'AGORA É PRA SE FUDER, VAI CONTINUAR?',
-  'PORRAAAAAN.. ESSA EU NÃO ESPERAVA, VAI CONTINUAR?',
+  'AGORA É PRA SE LASCAR VIU, VAI CONTINUAR?',
+  'TA RESOLVENDO TUDO NÉ SABICHONA.. AGORA VÁ CONTINUE..',
   'TÔ ACHANDO QUE DEIXEI FÁCIL DEMAIS, VAI CONTINUAR?',
-  'VÁ.. SÓ CONTINUE PRA VOCÊ VER A LAPADA',
+  'ORRAAAAA.. VOCÊ CONSEGUIU! CLIQUE AQUI PARA FINALIZAR.',
 ];
 
 const SkipButton = ({ index, show, handleIncrementIndex }) => {

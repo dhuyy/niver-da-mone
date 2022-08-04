@@ -17,8 +17,8 @@ GridContainer.defaultProps = {
   gridTemplateRows: '50vh 50vh',
 };
 
-const Grid = ({ children }) => {
-  return <GridContainer>{children}</GridContainer>;
+const Grid = ({ children, className }) => {
+  return <GridContainer className={className}>{children}</GridContainer>;
 };
 
 export default Grid;

@@ -6,6 +6,8 @@ import { Flex } from './Flex';
 const TitleText = styled(Flex)`
   ${color};
   ${fontSize};
+
+  font-family: 'treasurehunt';
 `;
 
 TitleText.defaultProps = {
@@ -17,9 +19,15 @@ TitleText.defaultProps = {
 
 const Title = ({ challengeIndex }) => {
   return (
-    <TitleText>{`Desafio ${
-      challengeIndex === 0 ? 'Exemplo' : `#${challengeIndex}`
-    }`}</TitleText>
+    <TitleText>
+      {challengeIndex === 7
+        ? ''
+        : challengeIndex === 0
+        ? 'Desafio Exemplo'
+        : challengeIndex === 6
+        ? 'Desafio Final'
+        : `Desafio #${challengeIndex}`}
+    </TitleText>
   );
 };
 
