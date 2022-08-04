@@ -1,20 +1,36 @@
 import styled from '@emotion/styled';
-import { gridArea, zIndex } from 'styled-system';
+import {
+  space,
+  gridArea,
+  zIndex,
+  display,
+  gridTemplateColumns,
+  gridTemplateRows,
+} from 'styled-system';
 
-import { Flex } from './Flex';
-
-const Container = styled(Flex)`
+const Container = styled.div`
+  ${space};
   ${gridArea};
   ${zIndex};
+  ${display};
+  ${gridTemplateColumns};
+  ${gridTemplateRows};
+
+  grid-template-areas: 'Left Right';
 
   border: 2px solid white; /** REMOVE THIS */
 `;
 
 Container.defaultProps = {
+  p: '60px',
+  display: 'grid',
   gridArea: 'Bottom',
   zIndex: '1',
-  alignItems: 'center',
+  alignItems: 'flex-start',
   justifyContent: 'center',
+  flexDirection: 'column',
+  gridTemplateColumns: '0.7fr 0.3fr',
+  gridTemplateRows: '1fr',
 };
 
 const BottomBlock = ({ children }) => {
