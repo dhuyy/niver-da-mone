@@ -11,7 +11,7 @@ const Container = styled(Flex)`
 `;
 
 Container.defaultProps = {
-  p: '70px',
+  p: '60px',
   gridArea: 'Top',
   zIndex: '1',
   flexDirection: 'column',
