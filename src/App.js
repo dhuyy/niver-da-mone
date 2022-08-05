@@ -115,16 +115,16 @@ const App = () => {
                     ))}
                   </PasswordContainer>
                   <SkipButtonContainer>
-                    <SkipButton
+                    {/* <SkipButton
                       index={challengeIndex}
                       show={isAllPasswordsValid}
                       handleIncrementIndex={handleIncrementIndex}
-                    />
-                    {/* <SkipButton
+                    /> */}
+                    <SkipButton
                       index={challengeIndex}
                       show={true}
                       handleIncrementIndex={handleIncrementIndex}
-                    /> */}
+                    />
                   </SkipButtonContainer>
                 </>
               ) : (

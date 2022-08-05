@@ -7,14 +7,14 @@ const TipText = styled(Flex)`
   ${color};
   ${fontSize};
   
-  font-family: 'treasurehunt';
+  font-family: 'BlackPearl';
 `;
 
 TipText.defaultProps = {
   as: 'h2',
   m: 0,
   color: 'white',
-  fontSize: '40px',
+  fontSize: '50px',
 };
 
 const Tip = ({ text }) => {

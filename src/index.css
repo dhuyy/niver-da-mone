@@ -9,19 +9,10 @@ body {
 }
 
 @font-face {
-  font-family: 'treasurehunt';
-  src: url('./assets/fonts/treasurehunt.woff2') format('woff2'),
-    url('./assets/fonts/treasurehunt.woff') format('woff');
+  font-family: 'BlackPearl';
+  src: url('./assets/fonts/BlackPearl.woff2') format('woff2'),
+    url('./assets/fonts/BlackPearl.woff') format('woff');
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TypoGraphica';
-  src: url('./assets/fonts/TypoGraphica.woff2') format('woff2'),
-    url('./assets/fonts/TypoGraphica.woff') format('woff');
-  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
