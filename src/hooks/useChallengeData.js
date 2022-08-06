@@ -3,7 +3,12 @@ import doorTwo from '../assets/video/door_2.mp4';
 import doorThree from '../assets/video/door_3.mp4';
 import doorFour from '../assets/video/door_4.mp4';
 
-const friends = ['Eli', 'Isadora', 'Débora', 'Cássia'];
+const friends = [
+  'Eli',
+  'Isadora',
+  'Débora',
+  'Cássia'
+];
 
 export const useChallengeData = () => {
   return [
@@ -20,7 +25,7 @@ export const useChallengeData = () => {
       videoSrc: doorTwo,
       videoDuration: 9400,
       inputRegExp: /^[0-9]$/,
-      answers: ['81'],
+      answers: ['56'],
       validator: (input, word) => input === word,
     },
     {
@@ -41,7 +46,7 @@ export const useChallengeData = () => {
       videoSrc: doorFour,
       videoDuration: 4100,
       inputRegExp: /^[0-9]$/,
-      answers: ['144'],
+      answers: ['78'],
       validator: (input, word) => input === word,
     },
     {
@@ -49,15 +54,15 @@ export const useChallengeData = () => {
       videoSrc: doorOne,
       videoDuration: 4000,
       inputRegExp: /^[0-9]$/,
-      answers: ['92348293'],
+      answers: ['1091902'],
       validator: (input, word) => input === word,
     },
     {
       tip: '"Em todas as viagens, sempre compramos um ima na saideira. A chave do tesouro esta provavelmente na geladeira"',
       videoSrc: doorTwo,
       videoDuration: 9400,
-      inputRegExp: /^[a-zA-Z]$/,
-      answers: ['SIMONE'],
+      inputRegExp: /^[0-9]$/,
+      answers: ['24'],
       validator: (input, word) => input === word,
     },
     {
@@ -65,11 +70,11 @@ export const useChallengeData = () => {
       videoSrc: doorThree,
       videoDuration: 10000,
       inputRegExp: /^[a-zA-Z]$/,
-      answers: ['SIMONE'],
+      answers: ['EOQUEOME', 'ARRUDIAR'],
       validator: (input, word) => input === word,
     },
     {
-      tip: 'Parabens! Voce conseguiu encontrar o seu tesouro!',
+      tip: 'Parabens! Voce encontrou o seu tesouro!',
       videoSrc: null,
       videoDuration: 0,
       inputRegExp: null,
