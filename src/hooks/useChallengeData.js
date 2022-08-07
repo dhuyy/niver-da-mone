@@ -3,10 +3,25 @@ import doorTwo from '../assets/video/door_2.mp4';
 import doorThree from '../assets/video/door_3.mp4';
 import doorFour from '../assets/video/door_4.mp4';
 
+const friends = [
+  'Cassia',
+  'Cassia',
+  'Eli',
+  'Patricia',
+  'Renata',
+  'Kat',
+  'Isabelly',
+  'Jessica',
+  'Debora',
+  'Malu',
+  'Ester',
+  'Alana',
+];
+
 export const useChallengeData = () => {
   return [
     {
-      tip: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, unde?',
+      tip: '"A chave do tesouro esta escondida atras do quadro da arara azul"',
       videoSrc: doorOne,
       videoDuration: 4000,
       inputRegExp: /^[a-zA-Z]$/,
@@ -14,55 +29,60 @@ export const useChallengeData = () => {
       validator: (input, word) => input === word,
     },
     {
-      tip: 'Tempora vel, molestias voluptas facilis consequuntur ipsa eligendi voluptate nemo officia iste?',
+      tip: '"Farinha dourada que da sabor a vida, a chave do tesouro esta na sua comida favorita"',
       videoSrc: doorTwo,
       videoDuration: 9400,
-      inputRegExp: /^[a-zA-Z]$/,
-      answers: ['CISOEUSDJ'],
+      inputRegExp: /^[0-9]$/,
+      answers: ['56'],
       validator: (input, word) => input === word,
     },
     {
-      tip: 'Tenetur error, odio quidem explicabo nostrum? Rem alias consequatur deserunt harum.',
+      tip: '"A chave do tesouro esta entre as fragancias que perfumam o ambiente, uma outra pessoa pode ate sentir mas tem que ser cliente"',
       videoSrc: doorThree,
       videoDuration: 10000,
       inputRegExp: /^[a-zA-Z]$/,
-      answers: ['SIMONE'],
+      answers: [
+        friends
+          .sort()
+          .map(friend => friend.charAt(0))
+          .join(''),
+      ],
       validator: (input, word) => input === word,
     },
     {
-      tip: 'Deleniti quas voluptates magnam, commodi aut cupiditate architecto doloremque debitis obcaecati quae!',
+      tip: '"Terra dos canais, das tulipas e de incoparavel beleza, a chave do tesouro esta na garrafa que trouxemos de cerveja"',
       videoSrc: doorFour,
       videoDuration: 4100,
-      inputRegExp: /^[a-zA-Z]$/,
-      answers: ['SIMONE'],
+      inputRegExp: /^[0-9]$/,
+      answers: ['78'],
       validator: (input, word) => input === word,
     },
     {
-      tip: 'Distinctio non odit pariatur quidem inventore ipsum quaerat sequi asperiores nulla. Vitae esse autem quam.',
+      tip: '"Companheira fitness de todas as manhas, voce sempre a leva. A chave do tesouro esta em uma bolsa que voce carrega"',
       videoSrc: doorOne,
       videoDuration: 4000,
-      inputRegExp: /^[a-zA-Z]$/,
-      answers: ['SIMONE'],
+      inputRegExp: /^[0-9]$/,
+      answers: ['1091902'],
       validator: (input, word) => input === word,
     },
     {
-      tip: 'Debitis numquam est consequatur, itaque eaque corporis fuga cum. Totam, velit magnam?',
+      tip: '"Em todas as viagens, sempre compramos um ima na saideira. A chave do tesouro esta provavelmente na geladeira"',
       videoSrc: doorTwo,
       videoDuration: 9400,
-      inputRegExp: /^[a-zA-Z]$/,
-      answers: ['SIMONE'],
+      inputRegExp: /^[0-9]$/,
+      answers: ['24'],
       validator: (input, word) => input === word,
     },
     {
-      tip: 'Debitis numquam est consequatur, itaque eaque corporis fuga cum. Totam, velit magnam?',
+      tip: '"Pequenino e amarelo, ele te da significados de antemao. A chave do tesouro esta no seu dicionario de Alemao"',
       videoSrc: doorThree,
       videoDuration: 10000,
       inputRegExp: /^[a-zA-Z]$/,
-      answers: ['SIMONE'],
+      answers: ['EOQUEOME', 'ARRUDIAR'],
       validator: (input, word) => input === word,
     },
     {
-      tip: 'Parabens! Voce conseguiu encontrar o seu tesouro!',
+      tip: 'Parabens! Voce encontrou o seu tesouro!',
       videoSrc: null,
       videoDuration: 0,
       inputRegExp: null,

@@ -6,8 +6,6 @@ import { Flex } from './Flex';
 const Container = styled(Flex)`
   ${gridArea};
   ${zIndex};
-
-  border: 2px solid white; /** REMOVE THIS */
 `;
 
 Container.defaultProps = {

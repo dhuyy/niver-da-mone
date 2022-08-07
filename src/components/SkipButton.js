@@ -26,6 +26,8 @@ const Button = styled(BaseButton)`
   ${display};
   ${alignItems};
   ${justifyContent};
+
+  background-color: rgb(164, 203, 248);
 `;
 
 Button.defaultProps = {
@@ -67,9 +69,9 @@ const FUNNY_MEMES = [
   skipOne,
   skipTwo,
   skipThree,
-  skipFour,
-  skipSeven,
   skipSix,
+  skipSeven,
+  skipFour,
   skipFive,
 ];
 
@@ -77,9 +79,9 @@ const FUNNY_PHRASES = [
   'BOA! TÁ PREPARADA? VAMOS COMEÇAR!',
   'HUUUUM.. VAI CONTINUAR?',
   'TU QUER MESMO ESSE PRESENTE NÉ.. VAI CONTINUAR?',
-  'AGORA É PRA SE LASCAR VIU, VAI CONTINUAR?',
-  'TA RESOLVENDO TUDO NÉ SABICHONA.. AGORA VÁ CONTINUE..',
   'TÔ ACHANDO QUE DEIXEI FÁCIL DEMAIS, VAI CONTINUAR?',
+  'TA RESOLVENDO TUDO NÉ SABICHONA.. AGORA VÁ CONTINUE..',
+  'AGORA É PRA SE LASCAR VIU, VAI CONTINUAR?',
   'ORRAAAAA.. VOCÊ CONSEGUIU! CLIQUE AQUI PARA FINALIZAR.',
 ];
 

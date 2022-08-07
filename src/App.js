@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { gridArea } from 'styled-system';
-import { useLocalStorage } from 'react-use';
+import { useLocalStorage, useWindowSize } from 'react-use';
+import Confetti from 'react-confetti';
 
 import { useChallengeData } from './hooks/useChallengeData';
 import Grid from './components/Grid';
+import PlaySound from './components/PlaySound';
 import TopBlock from './components/TopBlock';
 import BottomBlock from './components/BottomBlock';
 import VideoPlayer from './components/VideoPlayer';
@@ -39,11 +41,12 @@ SkipButtonContainer.defaultProps = {
 
 const App = () => {
   const [value, setValue] = useLocalStorage('challengeIndex', 0);
+  const { width, height } = useWindowSize();
   const [animation, setAnimation] = useState('');
   const [display, setDisplay] = useState(false);
   const [challengeIndex, setChallengeIndex] = useState(value);
   const challenges = useChallengeData();
-  const [isAllPasswordsValid, setIsAllPasswordsValid] = useState(false);
+  const [setIsAllPasswordsValid] = useState(false);
   const [videoRef, setVideoRef] = useState(null);
   const { tip, videoSrc, videoDuration, inputRegExp, answers, validator } =
     challenges[challengeIndex];
@@ -76,11 +79,18 @@ const App = () => {
   const handleVideoRef = ref => {
     setVideoRef(ref);
   };
+  const isLastScreen = !answers.length > 0;
 
   useEffect(() => {
     setAnimation('show');
     setDisplay(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    setValidityPasswordList(answers.map(() => false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [challengeIndex]);
 
   useEffect(() => {
     setIsAllPasswordsValid(validityPasswordList.every(isValid => isValid));
@@ -88,6 +98,16 @@ const App = () => {
 
   return (
     <>
+      {isLastScreen && (
+        <PlaySound>
+          <Confetti
+            width={width}
+            height={height}
+            tweenDuration={30000}
+            numberOfPieces={200}
+          />
+        </PlaySound>
+      )}
       {videoSrc && (
         <VideoPlayer src={videoSrc} handleVideoRef={handleVideoRef} />
       )}
@@ -96,10 +116,10 @@ const App = () => {
           <Grid style={AppStyles} className={animation}>
             <TopBlock>
               <Title challengeIndex={challengeIndex} />
-              <Tip text={tip} />
+              <Tip text={tip} challengeIndex={challengeIndex} />
             </TopBlock>
             <BottomBlock>
-              {answers.length > 0 ? (
+              {!isLastScreen && (
                 <>
                   <PasswordContainer>
                     {answers.map((answer, index) => (
@@ -117,18 +137,13 @@ const App = () => {
                   <SkipButtonContainer>
                     <SkipButton
                       index={challengeIndex}
-                      show={isAllPasswordsValid}
-                      handleIncrementIndex={handleIncrementIndex}
-                    />
-                    {/* <SkipButton
-                      index={challengeIndex}
+                      // Swap the `true` value below for `isAllPasswordsValid`
+                      // if you want to make it work normally
                       show={true}
                       handleIncrementIndex={handleIncrementIndex}
-                    /> */}
+                    />
                   </SkipButtonContainer>
                 </>
-              ) : (
-                <h1 style={{ color: 'white' }}>Dica Bonus</h1>
               )}
             </BottomBlock>
           </Grid>

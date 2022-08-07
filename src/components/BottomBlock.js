@@ -17,8 +17,6 @@ const Container = styled.div`
   ${gridTemplateRows};
 
   grid-template-areas: 'Left Right';
-
-  border: 2px solid white; /** REMOVE THIS */
 `;
 
 Container.defaultProps = {

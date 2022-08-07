@@ -7,14 +7,14 @@ const TitleText = styled(Flex)`
   ${color};
   ${fontSize};
 
-  font-family: 'treasurehunt';
+  font-family: 'BlackPearl';
 `;
 
 TitleText.defaultProps = {
   as: 'h1',
   m: 0,
   color: 'white',
-  fontSize: '90px',
+  fontSize: '100px',
 };
 
 const Title = ({ challengeIndex }) => {

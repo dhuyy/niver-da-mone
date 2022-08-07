@@ -79,7 +79,6 @@ const Password = ({
         handleOutputString={handleOutputString}
         inputProps={answerLetters.map(() => ({
           className: 'box',
-          placeholder: '?',
         }))}
         inputRegExp={inputRegExp}
       />
