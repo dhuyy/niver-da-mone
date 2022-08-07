@@ -4,10 +4,18 @@ import doorThree from '../assets/video/door_3.mp4';
 import doorFour from '../assets/video/door_4.mp4';
 
 const friends = [
+  'Cassia',
+  'Cassia',
   'Eli',
-  'Isadora',
-  'Débora',
-  'Cássia'
+  'Patricia',
+  'Renata',
+  'Kat',
+  'Isabelly',
+  'Jessica',
+  'Debora',
+  'Malu',
+  'Ester',
+  'Alana',
 ];
 
 export const useChallengeData = () => {

@@ -46,7 +46,7 @@ const App = () => {
   const [display, setDisplay] = useState(false);
   const [challengeIndex, setChallengeIndex] = useState(value);
   const challenges = useChallengeData();
-  const [isAllPasswordsValid, setIsAllPasswordsValid] = useState(false);
+  const [setIsAllPasswordsValid] = useState(false);
   const [videoRef, setVideoRef] = useState(null);
   const { tip, videoSrc, videoDuration, inputRegExp, answers, validator } =
     challenges[challengeIndex];
@@ -137,14 +137,11 @@ const App = () => {
                   <SkipButtonContainer>
                     <SkipButton
                       index={challengeIndex}
-                      show={isAllPasswordsValid}
-                      handleIncrementIndex={handleIncrementIndex}
-                    />
-                    {/* <SkipButton
-                      index={challengeIndex}
+                      // Swap the `true` value below for `isAllPasswordsValid`
+                      // if you want to make it work normally
                       show={true}
                       handleIncrementIndex={handleIncrementIndex}
-                    /> */}
+                    />
                   </SkipButtonContainer>
                 </>
               )}
